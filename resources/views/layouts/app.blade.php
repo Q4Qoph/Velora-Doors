@@ -38,17 +38,38 @@
             <a class="velora-logo-link" href="/">
                 <img src="{{ asset('assets/img/velora-logo.webp') }}" alt="Velora Doors" class="velora-logo-img">
             </a>
-            <!-- Menu -->
+            <!-- Desktop Menu -->
             <ul class="velora-nav-links">
                 <li><a href="/">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Doors</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
-            <!-- CTA -->
+            <!-- Desktop CTA -->
             <a href="#" class="velora-cta-btn">Contact Us</a>
+            <!-- Hamburger (mobile only) -->
+            <button class="velora-hamburger" id="veloraHamburger" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="velora-mobile-overlay" id="veloraMobileMenu">
+        <button class="velora-mobile-close" id="veloraMobileClose" aria-label="Close menu">&times;</button>
+        <a href="/" class="velora-mobile-logo-link">
+            <img src="{{ asset('assets/img/velora-logo.webp') }}" alt="Velora Doors" class="velora-mobile-logo">
+        </a>
+        <ul class="velora-mobile-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Doors</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="#" class="velora-mobile-cta">Contact Us</a>
+    </div>
     <!-- Slider -->
     <header class="header slider-fade">
         <div class="owl-carousel owl-theme">
@@ -931,6 +952,7 @@
     <script src="{{ asset('assets/js/datepicker.js') }}"></script>
     <script src="{{ asset('assets/js/smooth-scroll.min.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="{{ asset('assets/js/velora-menu.js') }}"></script>
 </body>
 
 <!-- Mirrored from duruthemes.com/demo/html/cappa/demo2-light/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Apr 2026 02:34:06 GMT -->

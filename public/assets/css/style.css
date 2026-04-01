@@ -1201,7 +1201,7 @@ color: #aa8453;
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 6px;
-    color: #c9a96e;
+    color: rgba(255, 245, 220, 0.95);
     margin-bottom: 20px;
     margin-top: 20px;
     -webkit-animation-delay: .4s;
@@ -5550,7 +5550,117 @@ select {
     background: #c9a96e;
     color: #0d0d0d;
 }
+/* ── Hamburger button (mobile only) ── */
+.velora-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    z-index: 200;
+}
+.velora-hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: #c9a96e;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+.velora-hamburger.is-active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.velora-hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+}
+.velora-hamburger.is-active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile full-screen overlay menu ── */
+.velora-mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 8, 5, 0.97);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+.velora-mobile-overlay.is-open {
+    opacity: 1;
+    pointer-events: all;
+}
+.velora-mobile-close {
+    position: absolute;
+    top: 24px;
+    right: 28px;
+    background: transparent;
+    border: none;
+    color: #c9a96e;
+    font-size: 36px;
+    line-height: 1;
+    cursor: pointer;
+}
+.velora-mobile-logo-link { display: block; }
+.velora-mobile-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 8px;
+}
+.velora-mobile-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.velora-mobile-nav li {
+    margin: 18px 0;
+}
+.velora-mobile-nav a {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    color: rgba(255, 230, 180, 0.9);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+.velora-mobile-nav a:hover { color: #c9a96e; }
+.velora-mobile-cta {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #c9a96e;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #c9a96e;
+    padding: 13px 36px;
+    transition: all 0.3s;
+}
+.velora-mobile-cta:hover {
+    background: #c9a96e;
+    color: #0d0d0d;
+}
+
+/* ── Mobile breakpoint ── */
 @media (max-width: 768px) {
-    .velora-nav-inner { padding: 18px 24px; }
+    .velora-nav-inner { padding: 16px 20px; }
     .velora-nav-links, .velora-cta-btn { display: none; }
+    .velora-hamburger { display: flex; }
+    .velora-logo-img {
+        height: 55px;
+        transform: none;
+    }
 }
