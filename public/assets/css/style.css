@@ -5660,7 +5660,8 @@ select {
     .velora-nav-links, .velora-cta-btn { display: none; }
     .velora-hamburger { display: flex; }
     .velora-logo-img {
-        height: 55px;
-        transform: none;
+        height: 70px;
+        transform: scale(1.6);
+        transform-origin: left center;
     }
 }
