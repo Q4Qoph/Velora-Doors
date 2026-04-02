@@ -825,6 +825,7 @@ color: #aa8453;
     left: 0;
     top: 0;
     width: 100%;
+    /* background: rgba(0, 0, 0, 0.5); */
     background: transparent;
     z-index: 99;
     padding-right: 0;
@@ -1456,7 +1457,8 @@ hr {
     animation: pulse 2s infinite;
     border-radius: 100%;
 }
-.header div.reservation a .icon i {
+.header div.reservation a .icon i,
+.header div.reservation a .icon svg {
     color: #FFF;
     font-size: 24px;
     transform: rotate(90deg);
