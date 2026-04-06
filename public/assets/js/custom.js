@@ -583,10 +583,10 @@ var CustomApp = {
                 preloaderBg.remove();
             }, 600); // CSS transition süresiyle uyumlu
         };
-        // When the page is fully loaded
-        window.addEventListener('load', hidePreloader);
-        // 5 seconds fallback
-        setTimeout(hidePreloader, 5000);
+        // Hide as soon as DOM is ready, don't wait for images
+        document.addEventListener('DOMContentLoaded', hidePreloader);
+        // 800ms fallback
+        setTimeout(hidePreloader, 800);
     }
 };
 CustomApp.init();

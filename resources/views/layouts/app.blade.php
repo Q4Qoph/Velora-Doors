@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/plugins.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
 </head>
-<body style="overflow: hidden; height: 100vh;">
+<body class="@yield('body-class')">
     <!-- Preloader -->
     <div class="preloader-bg"></div>
     <div id="preloader">
@@ -45,12 +45,12 @@
             <!-- Desktop Menu -->
             <ul class="velora-nav-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Doors</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/doors">Doors</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
             <!-- Desktop CTA -->
-            <a href="#" class="velora-cta-btn">Contact Us</a>
+            <a href="/contact" class="velora-cta-btn">Contact Us</a>
             <!-- Hamburger (mobile only) -->
             <button class="velora-hamburger" id="veloraHamburger" aria-label="Open menu">
                 <span></span>
@@ -68,17 +68,18 @@
         </a>
         <ul class="velora-mobile-nav">
             <li><a href="/">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Doors</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/doors">Doors</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
-        <a href="#" class="velora-mobile-cta">Contact Us</a>
+        <a href="/contact" class="velora-mobile-cta">Contact Us</a>
     </div>
+    @section('hero')
     <!-- Slider -->
     <header class="header slider-fade">
         <div class="owl-carousel owl-theme">
             <!-- The opacity on the image is made with "data-overlay-dark="number". You can change it using the numbers 0-9. -->
-            <div class="text-center item bg-img" data-overlay-dark="2" data-background="{{ asset('assets/img/slider/door1.png') }}">
+            <div class="text-center item bg-img" data-overlay-dark="2" data-background="{{ asset('assets/img/slider/door1.webp') }}">
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row">
@@ -92,13 +93,13 @@
                                 </span>
                                 <h4>Premium Wooden Doors</h4>
                                 <h1>Crafted for Timeless Spaces</h1>
-                                <div class="butn-light mt-30 mb-30"> <a href="#"><span>Explore Collection</span></a> </div>
+                                <div class="butn-light mt-30 mb-30"> <a href="/doors"><span>Explore Collection</span></a> </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center item bg-img" data-overlay-dark="2" data-background="{{ asset('assets/img/slider/door2.png') }}">
+            <div class="text-center item bg-img" data-overlay-dark="2" data-background="{{ asset('assets/img/slider/door2.webp') }}">
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row">
@@ -112,13 +113,13 @@
                                 </span>
                                 <h4>African Hardwood Excellence</h4>
                                 <h1>Where Luxury Meets Craft</h1>
-                                <div class="butn-light mt-30 mb-30"> <a href="#"><span>Explore Collection</span></a> </div>
+                                <div class="butn-light mt-30 mb-30"> <a href="/doors"><span>Explore Collection</span></a> </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="text-center item bg-img" data-overlay-dark="3" data-background="{{ asset('assets/img/slider/door3.png') }}">
+            <div class="text-center item bg-img" data-overlay-dark="3" data-background="{{ asset('assets/img/slider/door3.webp') }}">
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row">
@@ -132,7 +133,7 @@
                                 </span>
                                 <h4>Designed for Luxury Villas</h4>
                                 <h1>Doors That Define Spaces</h1>
-                                <div class="butn-light mt-30 mb-30"> <a href="#"><span>Explore Collection</span></a> </div>
+                                <div class="butn-light mt-30 mb-30"> <a href="/doors"><span>Explore Collection</span></a> </div>
                             </div>
                         </div>
                     </div>
@@ -141,7 +142,7 @@
         </div>
         <!-- WhatsApp Contact -->
         <div class="reservation">
-            <a href="https://wa.me/254XXXXXXXXX" target="_blank">
+            <a href="https://wa.me/254703232666" target="_blank">
                 <div class="icon d-flex justify-content-center align-items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#25D366" viewBox="0 0 16 16">
                         <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
@@ -151,6 +152,7 @@
             </a>
         </div>
     </header>
+    @show
     @section('page-sections')
     <!-- About -->
     <section class="about section-padding">
@@ -882,44 +884,34 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="footer-column footer-about">
-                            <h3 class="footer-title">About Hotel</h3>
-                            <p class="footer-about-text">Welcome to the best five-star deluxe hotel in New York. Hotel elementum sesue the aucan vestibulum aliquam justo in sapien rutrum volutpat.</p>
-
-                            <div class="footer-language"> <i class="lni ti-world"></i>
-                                    <select onchange="location = this.value;">
-                                        <option value="#0">English</option>
-                                        <option value="#0">German</option>
-                                    </select>
-                                </div>
+                            <h3 class="footer-title">Velora Doors</h3>
+                            <p class="footer-about-text">Premium wooden doors crafted from African hardwood, designed for luxury villas and global projects across the Middle East and Europe.</p>
+                            <div class="footer-about-social-list">
+                                <a href="#" aria-label="Instagram"><i class="ti-instagram"></i></a>
+                                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#" aria-label="Facebook"><i class="ti-facebook"></i></a>
+                                <a href="https://wa.me/254703232666" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-3 offset-md-1">
                         <div class="footer-column footer-explore clearfix">
                             <h3 class="footer-title">Explore</h3>
                             <ul class="footer-explore-list list-unstyled">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="rooms.html">Rooms & Suites</a></li>
-                                <li><a href="restaurant.html">Restaurant</a></li>
-                                <li><a href="spa-wellness.html">Spa & Wellness</a></li>
-                                <li><a href="about.html">About Hotel</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/doors">Our Doors</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="footer-column footer-contact">
                             <h3 class="footer-title">Contact</h3>
-                            <p class="footer-contact-text">1616 Broadway NY, New York 10001<br>United States of America</p>
                             <div class="footer-contact-info">
-                                <p class="footer-contact-phone"><span class="flaticon-call"></span> 855 100 4444</p>
-                                <p class="footer-contact-mail">info@luxuryhotel.com</p>
-                            </div>
-                            <div class="footer-about-social-list">
-                                <a href="#"><i class="ti-instagram"></i></a>
-                                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                <a href="#"><i class="ti-youtube"></i></a>
-                                <a href="#"><i class="ti-facebook"></i></a>
-                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                                <p class="footer-contact-phone"><span class="flaticon-call"></span> +254 703 232 666</p>
+                                <p class="footer-contact-mail">Info@veloradoors.com</p>
+                                <p class="footer-contact-mail">www.veloradoors.com</p>
                             </div>
                         </div>
                     </div>
@@ -931,7 +923,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="footer-bottom-inner">
-                            <p class="footer-bottom-copy-right">© Copyright 2026 by <a href="#">DuruThemes.com</a></p>
+                            <p class="footer-bottom-copy-right">© Copyright {{ date('Y') }} <a href="/">Velora Doors</a>. All rights reserved.</p>
                         </div>
                     </div>
                 </div>

@@ -1975,7 +1975,7 @@ hr {
 
 .banner-header h1 {
     font-size: 60px;
-    color: #fff;
+    color: rgba(255, 230, 180, 0.95);
     position: relative;
 }
 
@@ -5491,6 +5491,59 @@ select {
     }
 }
 
+/* ======= About, Doors & Contact pages – dark navbar on scroll ======= */
+body.page-about .nav-scroll,
+body.page-doors .nav-scroll,
+body.page-contact .nav-scroll {
+    background: rgba(10, 8, 5, 0.92);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+body.page-about .nav-scroll .velora-nav-links a,
+body.page-doors .nav-scroll .velora-nav-links a,
+body.page-contact .nav-scroll .velora-nav-links a {
+    color: rgba(255, 230, 180, 0.92);
+}
+body.page-about .nav-scroll .velora-cta-btn,
+body.page-doors .nav-scroll .velora-cta-btn,
+body.page-contact .nav-scroll .velora-cta-btn {
+    color: #c9a96e;
+    border-color: #c9a96e;
+}
+body.page-about .nav-scroll .velora-hamburger span,
+body.page-doors .nav-scroll .velora-hamburger span,
+body.page-contact .nav-scroll .velora-hamburger span {
+    background: #c9a96e;
+}
+
+/* ======= WhatsApp CTA button ======= */
+.velora-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #25D366;
+    border: 1px solid #25D366;
+    padding: 13px 28px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.velora-whatsapp-btn:hover {
+    background: #25D366;
+    color: #fff;
+}
+
+/* ======= Home page no-scroll lock ======= */
+body.page-no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+
 /* ======= Velora Doors – Navbar ======= */
 .velora-navbar {
     height: auto;
@@ -5666,4 +5719,250 @@ select {
         transform: scale(1.6);
         transform-origin: left center;
     }
+}
+/* ── Catalogue button ── */
+.velora-catalogue-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c9a96e;
+    text-decoration: none;
+    border: 1px solid #c9a96e;
+    padding: 12px 28px;
+    transition: all 0.3s;
+    margin-left: 12px;
+}
+.velora-catalogue-btn:hover {
+    background: #c9a96e;
+    color: #0d0d0d;
+}
+@media (max-width: 767px) {
+    .velora-catalogue-btn { margin-left: 0; margin-top: 12px; display: inline-flex; }
+}
+
+/* ── Contact form — unified input / select / textarea styling ── */
+.contact__form input[type="text"],
+.contact__form input[type="email"],
+.contact__form input[type="tel"],
+.contact__form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+    color: #555;
+    box-shadow: none;
+    outline: none;
+    transition: border-color 0.3s;
+    display: block;
+    height: auto;
+    line-height: 1.5;
+}
+.contact__form input[type="text"]:focus,
+.contact__form input[type="email"]:focus,
+.contact__form input[type="tel"]:focus,
+.contact__form textarea:focus {
+    border-color: #c9a96e;
+}
+.contact__form input::placeholder,
+.contact__form textarea::placeholder { color: #aaa; }
+
+.contact__form .form-group { margin-bottom: 20px; }
+
+/* ── Contact form select styling ── */
+.contact__form select {
+    width: 100%;
+    padding: 12px 36px 12px 14px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #555;
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23c9a96e'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.3s;
+    height: auto;
+    line-height: 1.5;
+}
+.contact__form select:focus { border-color: #c9a96e; }
+
+/* ── Phone code + input group ── */
+.velora-phone-group {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+.velora-phone-code {
+    flex-shrink: 0;
+    width: 120px;
+    padding: 12px 8px 12px 10px;
+    border: 1px solid #ddd;
+    border-right: none;
+    background: #f9f9f9;
+    color: #555;
+    font-size: 13px;
+    font-family: 'Barlow', sans-serif;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='5' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+    cursor: pointer;
+    outline: none;
+    border-radius: 0;
+}
+.velora-phone-group input[type="tel"] {
+    flex: 1;
+    min-width: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+/* ── Velora Door Gallery ── */
+.velora-gallery-section {
+    background: #0d0b08;
+    padding-bottom: 0;
+}
+.velora-gallery-header {
+    padding: 70px 60px 40px;
+}
+.velora-gallery-header .section-subtitle {
+    color: #c9a96e;
+    letter-spacing: 4px;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+.velora-gallery-title {
+    font-family: 'Cinzel', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: rgba(255, 230, 180, 0.95);
+    letter-spacing: 2px;
+}
+
+/* Grid */
+.velora-door-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 280px;
+    gap: 3px;
+}
+
+/* Span rules */
+.vdg-tall   { grid-column: span 2; grid-row: span 2; }
+.vdg-stack-top    { grid-column: span 2; grid-row: span 1; }
+.vdg-stack-bottom { grid-column: span 2; grid-row: span 1; }
+.vdg-wide   { grid-column: span 3; grid-row: span 2; }
+.vdg-feature { grid-column: span 3; grid-row: span 2; }
+.vdg-third  { grid-column: span 2; grid-row: span 2; }
+.vdg-half   { grid-column: span 3; grid-row: span 2; }
+
+/* Item base */
+.velora-door-item {
+    position: relative;
+    overflow: hidden;
+}
+.velora-door-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.velora-door-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.velora-door-item:hover img {
+    transform: scale(1.06);
+}
+
+/* Hover overlay */
+.velora-door-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0) 50%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+}
+.velora-door-item:hover .velora-door-overlay {
+    opacity: 1;
+}
+.velora-door-overlay span {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: rgba(255, 230, 180, 0.95);
+    text-transform: uppercase;
+}
+
+/* CTA bar */
+.velora-gallery-cta {
+    text-align: center;
+    padding: 60px 20px;
+    background: #0d0b08;
+}
+.velora-gallery-cta p {
+    color: rgba(255,230,180,0.55);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 24px;
+}
+.velora-gallery-cta .velora-cta-btn {
+    display: inline-block;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .velora-gallery-header { padding: 50px 20px 30px; }
+    .velora-gallery-title { font-size: 24px; }
+    .velora-door-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 200px;
+    }
+    .vdg-tall, .vdg-stack-top, .vdg-stack-bottom,
+    .vdg-wide, .vdg-feature, .vdg-third, .vdg-half {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+/* ── About banner image sizing ── */
+body.page-about .banner-header {
+    background-size: contain;
+    background-position: center center;
+    background-color: #0d0b08;
+}
+
+/* ── Doors banner image sizing ── */
+body.page-doors .banner-header {
+    background-size: contain;
+    background-position: center center;
+    background-color: #0d0b08;
+}
+
+/* ── Contact banner image sizing ── */
+body.page-contact .banner-header {
+    background-size: contain;
+    background-position: center center;
+    background-color: #0d0b08;
 }
