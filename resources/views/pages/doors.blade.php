@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+@section('title', 'Our Doors – Luxury Hardwood Door Collection | Velora Doors')
+@section('meta_description', 'Browse Velora Doors collection of solid hardwood doors — classic panels, arabesque inlay, contemporary, and bespoke designs available for export.')
+@section('canonical', url('/our-doors'))
+@section('og_title', 'Luxury Door Collection – Velora Doors')
+@section('og_description', 'Solid African hardwood doors — classic panels, arabesque inlay, fluted teak and bespoke carved designs. Available for export worldwide.')
+@section('og_image', asset('assets/img/doors/door-5.webp'))
+
 @section('body-class', 'page-doors')
 
 @section('hero')
@@ -18,111 +25,109 @@
 
 @section('page-sections')
     <!-- Door Gallery -->
-    <section class="velora-gallery-section">
-        <div class="container-fluid px-0">
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
 
-            <!-- Section Header -->
-            <div class="velora-gallery-header">
-                <div class="section-subtitle">Crafted from African Hardwood</div>
-                <div class="velora-gallery-title">Door Collection</div>
-            </div>
-
-            <!-- Grid -->
-            <div class="velora-door-grid">
-
-                <!-- Item — tall left -->
-                <div class="velora-door-item vdg-tall">
-                    <a href="{{ asset('assets/img/slider/door4.webp') }}" class="img-zoom">
-                        <img src="{{ asset('assets/img/doors/door-1.webp') }}" alt="Classic Hardwood Door">
-                        <div class="velora-door-overlay">
-                            <span>Classic Hardwood</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Right column — stacked two -->
-                <div class="velora-door-item vdg-stack-top">
-                    <a href="{{ asset('assets/img/doors/door-2.webp') }}" class="img-zoom">
-                        <img src="{{ asset('assets/img/doors/door-2.webp') }}" alt="Royal Panel Door">
-                        <div class="velora-door-overlay">
-                            <span>Royal Panel</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="velora-door-item vdg-stack-bottom">
-                    <a href="{{ asset('assets/img/doors/door-3.webp') }}" class="img-zoom">
-                        <img src="{{ asset('assets/img/doors/door-3.webp') }}" alt="Wood Finish Palette">
-                        <div class="velora-door-overlay">
-                            <span>Wood Finishes</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Full-width feature -->
-                <div class="velora-door-item vdg-wide">
-                    <a href="{{ asset('assets/img/doors/door-4.webp') }}" class="img-zoom">
-                        <img src="{{ asset('assets/img/doors/door-4.webp') }}" alt="Contemporary Collection">
-                        <div class="velora-door-overlay">
-                            <span>Contemporary Collection</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Feature right -->
-                <div class="velora-door-item vdg-feature">
-                    <a href="{{ asset('assets/img/doors/door-5.webp') }}" class="img-zoom">
-                        <img src="{{ asset('assets/img/doors/door-5.webp') }}" alt="Grand Double Door">
-                        <div class="velora-door-overlay">
-                            <span>Grand Double Door</span>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Row of 3 -->
-                <div class="velora-door-item vdg-third">
+                <!-- Row 1: 3 columns -->
+                <div class="col-md-4 gallery-item">
                     <a href="{{ asset('assets/img/doors/door-6.webp') }}" class="img-zoom">
-                        <img src="{{ asset('assets/img/doors/door-6.webp') }}" alt="Fluted Teak Door">
-                        <div class="velora-door-overlay">
-                            <span>Fluted Teak</span>
+                        <div class="gallery-box">
+                            <div class="gallery-img">
+                                <img src="{{ asset('assets/img/doors/door-6.webp') }}" class="img-fluid mx-auto d-block" alt="Fluted Teak Door">
+                            </div>
                         </div>
                     </a>
                 </div>
-                <div class="velora-door-item vdg-third">
+                <div class="col-md-4 gallery-item">
                     <a href="{{ asset('assets/img/doors/door-7.webp') }}" class="img-zoom">
-                        <img src="{{ asset('assets/img/doors/door-7.webp') }}" alt="Arabesque Inlay Door">
-                        <div class="velora-door-overlay">
-                            <span>Arabesque Inlay</span>
+                        <div class="gallery-box">
+                            <div class="gallery-img">
+                                <img src="{{ asset('assets/img/doors/door-7.webp') }}" class="img-fluid mx-auto d-block" alt="Arabesque Inlay Door">
+                            </div>
                         </div>
                     </a>
                 </div>
-                <div class="velora-door-item vdg-third">
+                <div class="col-md-4 gallery-item">
                     <a href="{{ asset('assets/img/doors/door-8.webp') }}" class="img-zoom">
-                        <img src="{{ asset('assets/img/doors/door-8.webp') }}" alt="Bespoke Collection">
-                        <div class="velora-door-overlay">
-                            <span>Bespoke Collection</span>
+                        <div class="gallery-box">
+                            <div class="gallery-img">
+                                <img src="{{ asset('assets/img/doors/door-8.webp') }}" class="img-fluid mx-auto d-block" alt="Bespoke Collection">
+                            </div>
                         </div>
                     </a>
                 </div>
 
-                <!-- Row of 2 -->
-                <div class="velora-door-item vdg-half">
+                <!-- Row 2: 2 columns -->
+                <div class="col-md-6 gallery-item">
+                    <a href="{{ asset('assets/img/doors/door-4.webp') }}" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img">
+                                <img src="{{ asset('assets/img/doors/door-4.webp') }}" class="img-fluid mx-auto d-block" alt="Contemporary Collection">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 gallery-item">
+                    <a href="{{ asset('assets/img/doors/door-11.webp') }}" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img">
+                                <img src="{{ asset('assets/img/doors/door-3.webp') }}" class="img-fluid mx-auto d-block" alt="Contemporary Door Collection">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Row 3: 3 columns -->
+                <div class="col-md-4 gallery-item">
+                    <a href="{{ asset('assets/img/doors/door-12.webp') }}" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img">
+                                <img src="{{ asset('assets/img/doors/door-12.webp') }}" class="img-fluid mx-auto d-block" alt="Door Collection">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <a href="{{ asset('assets/img/doors/door-13.webp') }}" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img">
+                                <img src="{{ asset('assets/img/doors/door-13.webp') }}" class="img-fluid mx-auto d-block" alt="Classic Hardwood Door">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-4 gallery-item">
+                    <a href="{{ asset('assets/img/doors/door-14.webp') }}" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img">
+                                <img src="{{ asset('assets/img/doors/door-14.webp') }}" class="img-fluid mx-auto d-block" alt="Luxury Panel Doors">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Row 4: 2 columns -->
+                <div class="col-md-6 gallery-item">
                     <a href="{{ asset('assets/img/doors/door-9.webp') }}" class="img-zoom">
-                        <img src="{{ asset('assets/img/doors/door-9.webp') }}" alt="Lattice Inlay Door">
-                        <div class="velora-door-overlay">
-                            <span>Lattice Inlay</span>
+                        <div class="gallery-box">
+                            <div class="gallery-img">
+                                <img src="{{ asset('assets/img/doors/door-9.webp') }}" class="img-fluid mx-auto d-block" alt="Lattice Inlay Door">
+                            </div>
                         </div>
                     </a>
                 </div>
-                <div class="velora-door-item vdg-half">
+                <div class="col-md-6 gallery-item">
                     <a href="{{ asset('assets/img/doors/door-10.webp') }}" class="img-zoom">
-                        <img src="{{ asset('assets/img/doors/door-10.webp') }}" alt="Sunburst Carved Door">
-                        <div class="velora-door-overlay">
-                            <span>Sunburst Carved</span>
+                        <div class="gallery-box">
+                            <div class="gallery-img">
+                                <img src="{{ asset('assets/img/doors/door-10.webp') }}" class="img-fluid mx-auto d-block" alt="Sunburst Carved Door">
+                            </div>
                         </div>
                     </a>
                 </div>
 
-            </div><!-- /.velora-door-grid -->
+            </div>
 
             <!-- CTA -->
             <div class="velora-gallery-cta">
@@ -133,18 +138,5 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="footer-bottom-inner">
-                            <p class="footer-bottom-copy-right">© Copyright {{ date('Y') }} by <a href="/">Velora Doors</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('includes.footer')
 @endsection

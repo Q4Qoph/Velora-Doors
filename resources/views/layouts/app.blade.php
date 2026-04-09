@@ -6,10 +6,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Velora Doors – Crafted for Timeless Spaces</title>
-    <meta name="description" content="Premium wooden doors crafted from African hardwood, designed for luxury villas and global projects.">
+    <title>@yield('title', 'Velora Doors – Premium Wooden Doors for Luxury Spaces')</title>
+    <meta name="description" content="@yield('meta_description', 'Premium wooden doors crafted from African hardwood, designed for luxury villas and global projects across the Middle East and Europe.')">
     <meta name="author" content="Velora Doors">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="@yield('canonical', url()->current())">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Velora Doors">
+    <meta property="og:title" content="@yield('og_title', 'Velora Doors – Premium Wooden Doors')">
+    <meta property="og:description" content="@yield('og_description', 'Premium wooden doors crafted from African hardwood for luxury villas and global projects.')">
+    <meta property="og:url" content="@yield('canonical', url()->current())">
+    <meta property="og:image" content="@yield('og_image', asset('assets/img/doors/door-2.webp'))">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('og_title', 'Velora Doors – Premium Wooden Doors')">
+    <meta name="twitter:description" content="@yield('og_description', 'Premium wooden doors crafted from African hardwood for luxury villas and global projects.')">
+    <meta name="twitter:image" content="@yield('og_image', asset('assets/img/doors/door-2.webp'))">
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@@context": "https://schema.org",
+      "@@type": "Organization",
+      "name": "Velora Doors",
+      "url": "https://www.veloradoors.com",
+      "logo": "{{ asset('assets/img/velora-logo.webp') }}",
+      "contactPoint": { "@@type": "ContactPoint", "telephone": "+254703232666", "contactType": "sales" },
+      "sameAs": []
+    }
+    </script>
     <link rel="icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" sizes="48x48">
     <link rel="icon" href="{{ asset('assets/img/favicon/favicon.svg') }}" type="image/svg+xml">
     <link rel="icon" href="{{ asset('assets/img/favicon/favicon-96x96.png') }}" type="image/png" sizes="96x96">
@@ -26,7 +51,10 @@
     <div class="preloader-bg"></div>
     <div id="preloader">
         <div id="preloader-status">
-            <div class="preloader-position loader"> <span></span> </div>
+            <div class="preloader-position velora-loader-reveal">
+                <img src="{{ asset('assets/img/favicon/favicon.svg') }}" alt="Velora Doors" class="velora-loader-icon">
+                <p class="velora-loader-name">VELORA DOORS</p>
+            </div>
         </div>
     </div>
     <!-- Progress scroll totop -->
@@ -45,12 +73,12 @@
             <!-- Desktop Menu -->
             <ul class="velora-nav-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/doors">Doors</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="/about-us">About</a></li>
+                <li><a href="/our-doors">Doors</a></li>
+                <li><a href="/contact-us">Contact</a></li>
             </ul>
             <!-- Desktop CTA -->
-            <a href="/contact" class="velora-cta-btn">Contact Us</a>
+            <a href="/contact-us" class="velora-cta-btn">Contact Us</a>
             <!-- Hamburger (mobile only) -->
             <button class="velora-hamburger" id="veloraHamburger" aria-label="Open menu">
                 <span></span>
@@ -68,11 +96,11 @@
         </a>
         <ul class="velora-mobile-nav">
             <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/doors">Doors</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/about-us">About</a></li>
+            <li><a href="/our-doors">Doors</a></li>
+            <li><a href="/contact-us">Contact</a></li>
         </ul>
-        <a href="/contact" class="velora-mobile-cta">Contact Us</a>
+        <a href="/contact-us" class="velora-mobile-cta">Contact Us</a>
     </div>
     @section('hero')
     <!-- Slider -->

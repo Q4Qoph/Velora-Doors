@@ -11,12 +11,18 @@ class HomeController extends Controller
     //
     public function index()
     {
-        return view('pages.home');
+    
+        $page = "Velora Doors – Crafted for Timeless Spaces";
+
+        return view('pages.home', compact('page'));
     }
 
     public function about()
     {
-        return view('pages.about');
+        
+        $page = "About Us - Velora Doors";
+
+        return view('pages.about', compact('page'));
     }
 
     public function doors()
