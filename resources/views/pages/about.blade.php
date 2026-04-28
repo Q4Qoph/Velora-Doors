@@ -24,21 +24,20 @@
 
 @section('page-sections')
 
-    {{-- Section 1: Brand Story --}}
+    {{-- Section 1: Brand Story - SINGLE IMAGE --}}
     <section class="about section-padding">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-md-6 mb-30 animate-box" data-animate-effect="fadeInUp">
                     <div class="section-subtitle">Founded 2021 &middot; Mombasa, Kenya</div>
                     <div class="section-title">Crafted from Africa's Finest Hardwood</div>
                     <p>Founded in 2021 and headquartered in Mombasa, Kenya, Velora Doors is a premium manufacturer of solid wood doors. From our strategic coastal hub, we deliver high-quality, custom-crafted doors to global markets with reliability, precision, and consistency.</p>
                     <p>We specialize in producing durable, architect-grade solid doors using Mvule wood — also known as African Teak or Iroko — one of Africa's most valued and resilient hardwoods. Our focus is on combining natural material strength with refined craftsmanship to meet the demands of high-end residential, commercial, and hospitality projects.</p>
                 </div>
-                <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp">
-                    <img src="{{ asset('assets/img/slider/door2.webp') }}" alt="Velora Solid Hardwood Door" class="mt-90 mb-30">
-                </div>
-                <div class="col col-md-3 animate-box" data-animate-effect="fadeInUp">
-                    <img src="{{ asset('assets/img/slider/door3.webp') }}" alt="Velora Luxury Door">
+                <div class="col-lg-5 col-md-6 animate-box" data-animate-effect="fadeInUp">
+                    <div class="text-center">
+                        <img src="{{ asset('assets/img/slider/about.png') }}" alt="Velora Solid Hardwood Door" class="img-fluid w-100 mt-90 mb-30">
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,6 +92,7 @@
         </div>
     </section>
 
+    {{-- Rest of sections remain unchanged --}}
     {{-- Section 3: Why Choose Velora --}}
     <section class="section-padding">
         <div class="container">

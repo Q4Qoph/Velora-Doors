@@ -28,8 +28,26 @@
     <section class="section-padding">
         <div class="container">
             <div class="row">
-
-                <!-- Row 1: 3 columns -->
+                <!-- Row 1: 2 columns -->
+                <div class="col-md-6 gallery-item">
+                    <a href="{{ asset('assets/img/doors/gall1.webp') }}" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img">
+                                <img src="{{ asset('assets/img/doors/gall1.webp') }}" class="img-fluid mx-auto d-block" alt="Contemporary Collection">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 gallery-item">
+                    <a href="{{ asset('assets/img/doors/gall2.webp') }}" class="img-zoom">
+                        <div class="gallery-box">
+                            <div class="gallery-img">
+                                <img src="{{ asset('assets/img/doors/gall2.webp') }}" class="img-fluid mx-auto d-block" alt="Contemporary Door Collection">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Row 2: 3 columns -->
                 <div class="col-md-4 gallery-item">
                     <a href="{{ asset('assets/img/doors/door-6.webp') }}" class="img-zoom">
                         <div class="gallery-box">
@@ -49,79 +67,98 @@
                     </a>
                 </div>
                 <div class="col-md-4 gallery-item">
-                    <a href="{{ asset('assets/img/doors/door-8.webp') }}" class="img-zoom">
+                    <a href="{{ asset('assets/img/doors/door-10.webp') }}" class="img-zoom">
                         <div class="gallery-box">
                             <div class="gallery-img">
-                                <img src="{{ asset('assets/img/doors/door-8.webp') }}" class="img-fluid mx-auto d-block" alt="Bespoke Collection">
+                                <img src="{{ asset('assets/img/doors/door-10.webp') }}" class="img-fluid mx-auto d-block" alt="Bespoke Collection">
                             </div>
                         </div>
                     </a>
                 </div>
 
-                <!-- Row 2: 2 columns -->
-                <div class="col-md-6 gallery-item">
-                    <a href="{{ asset('assets/img/doors/door-4.webp') }}" class="img-zoom">
-                        <div class="gallery-box">
-                            <div class="gallery-img">
-                                <img src="{{ asset('assets/img/doors/door-4.webp') }}" class="img-fluid mx-auto d-block" alt="Contemporary Collection">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 gallery-item">
-                    <a href="{{ asset('assets/img/doors/door-11.webp') }}" class="img-zoom">
-                        <div class="gallery-box">
-                            <div class="gallery-img">
-                                <img src="{{ asset('assets/img/doors/door-3.webp') }}" class="img-fluid mx-auto d-block" alt="Contemporary Door Collection">
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                
 
                 <!-- Row 3: 3 columns -->
-                <div class="col-md-4 gallery-item">
-                    <a href="{{ asset('assets/img/doors/door-12.webp') }}" class="img-zoom">
+
+                <div class="col-md-6 gallery-item">
+                    <a href="{{ asset('assets/img/doors/gall3.webp') }}" class="img-zoom">
                         <div class="gallery-box">
                             <div class="gallery-img">
-                                <img src="{{ asset('assets/img/doors/door-12.webp') }}" class="img-fluid mx-auto d-block" alt="Door Collection">
+                                <img src="{{ asset('assets/img/doors/gall3.webp') }}" class="img-fluid mx-auto d-block" alt="Lattice Inlay Door">
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 gallery-item">
-                    <a href="{{ asset('assets/img/doors/door-13.webp') }}" class="img-zoom">
+                <div class="col-md-6 gallery-item">
+                    <a href="{{ asset('assets/img/doors/gall7.png') }}" class="img-zoom">
                         <div class="gallery-box">
                             <div class="gallery-img">
-                                <img src="{{ asset('assets/img/doors/door-13.webp') }}" class="img-fluid mx-auto d-block" alt="Classic Hardwood Door">
+                                <img src="{{ asset('assets/img/doors/gall7.png') }}" class="img-fluid mx-auto d-block" alt="Sunburst Carved Door">
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-md-4 gallery-item">
-                    <a href="{{ asset('assets/img/doors/door-14.webp') }}" class="img-zoom">
-                        <div class="gallery-box">
-                            <div class="gallery-img">
-                                <img src="{{ asset('assets/img/doors/door-14.webp') }}" class="img-fluid mx-auto d-block" alt="Luxury Panel Doors">
+                <div class="row">
+                    <div class="col-md-4 gallery-item">
+                        <a href="{{ asset('assets/img/doors/door-12.webp') }}" class="img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img">
+                                    <img src="{{ asset('assets/img/doors/door-12.webp') }}" class="img-fluid mx-auto d-block" alt="Door Collection">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-4 gallery-item">
+                        <div class="row gap-0" >
+                            <div class="col-12 mb-3">
+                                <a href="{{ asset('assets/img/doors/gall4.png') }}" class="img-zoom">
+                                    <div class="gallery-box">
+                                        <div class="gallery-img">
+                                            <img src="{{ asset('assets/img/doors/gall4.png') }}" class="img-fluid mx-auto d-block" alt="Classic Hardwood Door">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-12">
+                                <a href="{{ asset('assets/img/doors/gall1.webp') }}" class="img-zoom">
+                                    <div class="gallery-box">
+                                        <div class="gallery-img">
+                                            <img src="{{ asset('assets/img/doors/gall1.webp') }}" class="img-fluid mx-auto d-block" alt="Luxury Panel Doors">
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-                    </a>
+                    </div>
+
+                    <div class="col-md-4 gallery-item">
+                        <a href="{{ asset('assets/img/doors/door-8.webp') }}" class="img-zoom">
+                            <div class="gallery-box">
+                                <div class="gallery-img">
+                                    <img src="{{ asset('assets/img/doors/door-8.webp') }}" class="img-fluid mx-auto d-block" alt="Luxury Panel Doors">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Row 4: 2 columns -->
                 <div class="col-md-6 gallery-item">
-                    <a href="{{ asset('assets/img/doors/door-9.webp') }}" class="img-zoom">
+                    <a href="{{ asset('assets/img/doors/gall5.png') }}" class="img-zoom">
                         <div class="gallery-box">
                             <div class="gallery-img">
-                                <img src="{{ asset('assets/img/doors/door-9.webp') }}" class="img-fluid mx-auto d-block" alt="Lattice Inlay Door">
+                                <img src="{{ asset('assets/img/doors/gall5.png') }}" class="img-fluid mx-auto d-block" alt="Lattice Inlay Door">
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-6 gallery-item">
-                    <a href="{{ asset('assets/img/doors/door-10.webp') }}" class="img-zoom">
+                    <a href="{{ asset('assets/img/doors/gall6.png') }}" class="img-zoom">
                         <div class="gallery-box">
                             <div class="gallery-img">
-                                <img src="{{ asset('assets/img/doors/door-10.webp') }}" class="img-fluid mx-auto d-block" alt="Sunburst Carved Door">
+                                <img src="{{ asset('assets/img/doors/gall6.png') }}" class="img-fluid mx-auto d-block" alt="Sunburst Carved Door">
                             </div>
                         </div>
                     </a>

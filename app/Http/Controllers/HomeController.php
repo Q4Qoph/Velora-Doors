@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactFormMail;
+use App\Mail\ContactAutoReplyMail;
 
 class HomeController extends Controller
 {
@@ -49,7 +50,10 @@ class HomeController extends Controller
         ]);
 
         try {
-            Mail::to('Info@veloradoors.com')->send(new ContactFormMail($validated));
+            // Notify the business
+            Mail::to('contact@veloradoors.com')->send(new ContactFormMail($validated));
+            // Send auto-reply to the customer
+            Mail::to($validated['email'])->send(new ContactAutoReplyMail($validated));
         } catch (\Exception $e) {
             return back()->withInput()->with('error', 'Something went wrong sending your message. Please try WhatsApp or email us directly.');
         }
