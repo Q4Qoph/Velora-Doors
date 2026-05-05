@@ -977,9 +977,11 @@
     <script src="{{ asset('assets/js/select2.js') }}"></script>
     <script src="{{ asset('assets/js/datepicker.js') }}"></script>
     <script src="{{ asset('assets/js/smooth-scroll.min.js') }}"></script>
+
     <script src="{{ asset('assets/js/custom.js') }}"></script>
     <script src="{{ asset('assets/js/velora-menu.js') }}"></script>
+    @stack('scripts')
 </body>
 
 <!-- Mirrored from duruthemes.com/demo/html/cappa/demo2-light/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 01 Apr 2026 02:34:06 GMT -->
-</html>
+</html>f

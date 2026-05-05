@@ -37,27 +37,47 @@ class HomeController extends Controller
     }
 
     public function sendContact(Request $request)
-    {
-        $validated = $request->validate([
-            'name'         => 'required|string|max:100',
-            'email'        => 'required|email',
-            'phone_code'   => 'required|string|max:10',
-            'phone'        => 'required|string|max:30',
-            'country'      => 'required|string|max:60',
-            'inquiry_type' => 'required|string|max:60',
-            'subject'      => 'required|string|max:150',
-            'message'      => 'required|string',
-        ]);
+{
+    $validated = $request->validate([
+        'name'         => 'required|string|max:100',
+        'email'        => 'required|email',
+        'phone_code'   => 'required|string|max:10',
+        'phone'        => 'required|string|max:30',
+        'country'      => 'required|string|max:60',
+        'inquiry_type' => 'required|string|max:60',
+        'subject'      => 'required|string|max:150',
+        'message'      => 'required|string',
+    ]);
 
-        try {
-            // Notify the business
-            Mail::to('contact@veloradoors.com')->send(new ContactFormMail($validated));
-            // Send auto-reply to the customer
-            Mail::to($validated['email'])->send(new ContactAutoReplyMail($validated));
-        } catch (\Exception $e) {
-            return back()->withInput()->with('error', 'Something went wrong sending your message. Please try WhatsApp or email us directly.');
+    try {
+        // Notify the business
+        Mail::to('contact@veloradoors.com')->send(new ContactFormMail($validated));
+        // Send auto-reply to the customer
+        Mail::to($validated['email'])->send(new ContactAutoReplyMail($validated));
+
+        $message = 'Your message was sent successfully. We will get back to you shortly.';
+
+        // If the request is AJAX (from our toast-enabled form), return JSON
+        if ($request->ajax() || $request->wantsJson()) {
+            return response()->json([
+                'success' => true,
+                'message' => $message,
+            ]);
         }
 
-        return back()->with('success', 'Your message was sent successfully. We will get back to you shortly.');
+        // Fallback for non-JavaScript browsers
+        return back()->with('success', $message);
+    } catch (\Exception $e) {
+        $errorMessage = 'Something went wrong sending your message. Please try WhatsApp or email us directly.';
+
+        if ($request->ajax() || $request->wantsJson()) {
+            return response()->json([
+                'success' => false,
+                'message' => $errorMessage,
+            ], 500);
+        }
+
+        return back()->withInput()->with('error', $errorMessage);
     }
+}
 }

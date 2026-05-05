@@ -5804,18 +5804,24 @@ body.page-no-scroll {
 .contact__form select:focus { border-color: #c9a96e; }
 
 /* ── Phone code + input group ── */
+/* ── Phone code + input group ── */
 .velora-phone-group {
     display: flex;
     align-items: stretch;
-    gap: 0;
+    border: 1px solid #ddd;           /* single border around both */
+    background: #fff;
+    transition: border-color 0.3s;
 }
+.velora-phone-group:focus-within {
+    border-color: #c9a96e;            /* unified focus highlight */
+}
+
 .velora-phone-code {
     flex-shrink: 0;
-    width: 120px;
-    padding: 12px 8px 12px 10px;
-    border: 1px solid #ddd;
-    border-right: none;
-    background: #f9f9f9;
+    width: 80px;                      /* just enough for flag + code */
+    padding: 12px 4px 12px 10px;
+    border: none;                     /* no individual border */
+    background: transparent;          /* seamless with wrapper */
     color: #555;
     font-size: 13px;
     font-family: 'Barlow', sans-serif;
@@ -5828,11 +5834,21 @@ body.page-no-scroll {
     outline: none;
     border-radius: 0;
 }
+
 .velora-phone-group input[type="tel"] {
     flex: 1;
     min-width: 0;
-    border-radius: 0;
-    margin-bottom: 0;
+    border: none;                     /* remove input border */
+    background: transparent;
+    padding: 12px 14px;
+    margin: 0;
+    outline: none;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    color: #555;
+}
+.velora-phone-group input[type="tel"]::placeholder {
+    color: #aaa;
 }
 
 /* ── Velora Door Gallery ── */
